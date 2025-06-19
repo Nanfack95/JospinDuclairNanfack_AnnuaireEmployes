@@ -1,140 +1,164 @@
-*{
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
+    padding: 20px;
+    background-color: #f4f7f6; /* Fond légèrement grisé pour la douceur */
     color: #333;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligne le contenu en haut */
+    min-height: 100vh;
 }
 
-.containeur{
-    max-width: 800px;
-    margin: auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+.containeur {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ombre subtile pour la profondeur */
+    width: 100%;
+    max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
 }
 
-h1, h2{
+h1, h2 {
+    color: #2c3e50; /* Couleur de titre plus foncée et moderne */
     text-align: center;
-    margin-bottom: 20px;
-    color:#0072ce;
+    margin-bottom: 25px;
 }
 
-form{
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #e0e0e0; /* Séparateur léger */
+    padding-bottom: 10px;
+}
+
+#formulaire-employee {
+    margin-bottom: 40px;
+    display: grid;
+    gap: 20px; /* Espace entre les champs du formulaire */
+}
+
+.forms {
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
-.forms{
-    display: flex;
-    flex-direction: column;
-}
-
-label{
-    margin-bottom: 5px;
-    font-weight: bold;;
-}
-
-input, select{
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline-color: #0072ce;
-}
-
-button{
-    padding:12px;
-    background-color: #0072ce;
-    color: #fff;
-    border: none;
+label {
     font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 12px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour le focus */
 }
 
-button:hover{
-    background-color: #005fa3;
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #3498db; /* Couleur de focus */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Ombre de focus */
+    outline: none;
 }
 
-#Listes-employes{
-    margin-top: 20px;
+.error-message {
+    color: #e74c3c; /* Rouge pour les erreurs */
+    font-size: 0.9em;
+    margin-top: 5px;
+    min-height: 1.2em; /* Réserve de l'espace pour éviter les sauts de page */
 }
 
-#Listes-employes li{
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
-    padding: 12px 16px;
-    border-left: 5px solid #0072ce;;
-    border-radius: 5px;
-    position: relative;
-}
-
-#Listes-employes li button{
-    position: absolute;
-    top: 12px;
-    right: 15px;
-    background-color: #e63946;
+button[type="submit"] {
+    background-color: #3498db; /* Bleu principal */
+    color: white;
+    padding: 12px 20px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    padding: 6px 10px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transitions pour l'interaction */
+    justify-self: start; /* Aligne le bouton à gauche dans la grille */
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9; /* Bleu plus foncé au survol */
+    transform: translateY(-2px); /* Léger soulèvement */
+}
+
+button[type="submit"]:active {
+    transform: translateY(0); /* Retour à la position initiale au clic */
+}
+
+#Listes-employes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#Listes-employes li {
+    background-color: #ecf0f1; /* Fond clair pour les éléments de la liste */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #3498db; /* Bordure décorative */    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#Listes-employes li:hover {
+    transform: translateX(5px); /* Léger décalage au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+#Listes-employes li strong { 
+    color: #2c3e50;
+}
+
+#Listes-employes li  button {
+    background-color: #e74c3c; /* Rouge pour le bouton supprimer */
+    color: white;
+    border: none;
+    padding: 8px 12px;
     border-radius: 4px;
-    font-size: 12px;
-    color: #fff;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    margin-top: 10px; 
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
 }
 
-#Listes-employes li button:hover{
-    background-color: #c12635;
-}
-
-#Listes-employes li div{
-    display: none;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-top: none;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#Listes-employes li:hover div{
-    display: block;
-}
-
-.error{
-    color: red;
-    margin-top: 10px;
-    font-size: 14px;
+#Listes-employes li button:hover {
+    opacity: 0.8;
 }
 
 /* Responsive */
-@media (max-width: 768px){
-    .container{
+@media (max-width: 600px) {
+    body {
         padding: 10px;
     }
 
-    form{
-        gap: 10px;
+    .containeur {
+        padding: 20px;
     }
 
-    #Listes-employes li{
-        padding: 10px;
-        font-size: 14px;
+    h1 {
+        font-size: 1.8em;
     }
 
-    #Listes-employes li div{
-        padding: 8px;
-        border-radius: 0;
-        font-size: 12px;
-        border: none;
-        box-shadow: none;
+    h2 {
+        font-size: 1.5em;
+    }
+
+    #formulaire-employee {
+        gap: 15px;
+    }
+
+    #Listes-employes li .actions button {
+        margin-left: 5px;
     }
 }
