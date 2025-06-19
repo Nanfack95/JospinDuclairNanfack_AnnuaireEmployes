@@ -38,7 +38,7 @@ Mini-application front-end permettant de gérer un annuaire interne simplifié d
 
 ## Bonus
 
-- Validation visuelle personnalisée (champ rouge/vert)
+- Validation visuelle personnalisée (champ rouge)
 - Message d'erreur spécifique sous chaque champ
 - Structure de code claire et commentée
 
