@@ -3,7 +3,7 @@
 ## Candidat
 **Nom :** Nanfack Jospin Duclair  
 **Langages utilisés :** HTML, CSS, JavaScript  
-**Temps réellement passé :** 3h50
+**Temps réellement passé :** 3h03
 
 ---
 
